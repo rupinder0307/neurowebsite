@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Dr. Rupinder's Neuropsychiatry Center</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .nav{
+            background-color: #7091a8;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+    <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ's</a></li>
+            <li><a href="contact.html">Contact Us</a></li> 
+            <li><a href="newsmedia.html">News & Media</a></li>  
+        </ul>
+  </nav>
+
+    <header>
+        <h1>Welcome to Dr. Rupinder's Neuropsychiatry Center</h1>
+    </header>
+    <div class="photohead" style="background-color: #4a738f; padding: 20px;">
+  <section style="display: flex; align-items: center; gap: 20px;">
+    <img 
+      src="https://i.postimg.cc/xdkvNmMF/rupinder-logo.png" 
+      alt="Profile Photo" 
+      style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #70c9b1;" 
+    />
+
+    <h3 style="margin: 0; color: white; font-size: 1.1rem;">
+      <strong>Your health is our priority.</strong><br>
+      We're here to help you with your neuropsychiatric well-being.
+    </h3>
+  </section>
+</div>
+
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>What We Offer</h2>
+        <p>We offer a variety of services to help you with mental health and neuropsychiatric needs.</p>
+        <div class="gallery">
+            <div class="gallery-row">
+                <div class="service-card">
+                    <img src="https://i.postimg.cc/BbN3TrsN/7918fd19-c13f-426c-bc56-93dea0bcf136.jpg" alt="Consultation" />
+                    <h3>Consultation</h3>
+                    <p>Get personalized consultation from Dr. Rupinder for your health.</p>
+                </div>
+                <div class="service-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHlXtqThSgTfLzuKDyAikNq1n6sjqGQQgcyA&s" alt="Therapies" />
+                    <h3>Therapies</h3>
+                    <p>We offer various therapies to improve mental wellness.</p>
+                </div>
+                <div class="service-card">
+                    <img src="data:image/jpeg;base64,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" alt="Follow-ups" />
+                    <h3>Follow-up Care</h3>
+                    <p>Ensuring continuous care and support after your initial consultation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta">
+        <h2>Ready to get started?</h2>
+        <p>Book an appointment with us today and take the first step towards a healthier future.</p>
+        <a href="contact.html" class="btn">Book an Appointment</a>
+    </section>
+
+    
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Dr. Rupinder's Neuropsychiatry Center, All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+   <div id="chat-toggle">💬</div>
+<div id="chat-window">
+  <div id="chat-header">Ask Us Anything</div>
+  <div id="chat-log"></div>
+  <input type="text" id="chat-input" placeholder="Type your question..." />
+</div>
+<script src="chatbot.js"></script>
+<link rel="stylesheet" href="chatbot.css" />
+
+</body>
+</html>
