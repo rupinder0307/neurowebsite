@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Dr. Rupinder's Neuropsychiatry Center</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #235570;
+        background-color: #6f6d6d; /* Background color for the whole page */
+    }
+
+    /* Navbar */
+    nav {
+    width: 100%;
+    background-color: #7091a8;; /* Grey bar for the header */
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+    }
+
+    nav ul li a:hover {
+        color: #f0f0f0;
+    }
+
+    /* Header Section */
+    header {
+        background-color: #235570; /* Darker grey for the header background */
+        color: #fff;
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+
+    /* Main Section */
+    main {
+        padding: 2rem;
+    }
+
+    /* About Us Page */
+    #team {
+        text-align: center;
+        padding: 3rem 1rem;
+    }
+
+    #team h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Keep existing styles up to .team-members, then update: */
+    .team-members {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        gap: 2rem;
+        width: 100%;
+    }
+
+    /* Force members into two rows with full-width bars */
+    .team-members > .row {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    /* Keep .team-member styles the same */
+    .team-member {
+        background-color: #444;
+        border-radius: 8px;
+        width: 250px;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        flex-shrink: 0;
+    }
+
+    .swiper {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #f0f0f0;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-slide img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+
+    .swiper-slide h3 {
+        margin: 0;
+        font-size: 20px;
+        color: #222;
+    }
+
+    .description {
+        margin-top: 8px;
+        color: #235570;
+    }
+
+    /* Footer Section */
+    footer {
+        background-color: #235570;
+        color: #fff;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        margin-top: 3rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+    /* Call to Action Section */
+    #cta {
+        background-color: #6d6d6d;
+        color: #fff;
+        text-align: center;
+        padding: 2rem 1rem;
+        margin-top: 3rem;
+    }
+
+    #cta h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #cta p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #cta .btn {
+        background-color: #fff;
+        color: #6d6d6d;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    #cta .btn:hover {
+        background-color: #007BFF;
+        color: #fff;
+    }
+
+    /* Swiper Controls */
+    .swiper-button-next,
+    .swiper-button-prev {
+        color: #222;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #222;
+    }
+
+    body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+footer.full-width-footer {
+  width: 100vw;             /* Full viewport width */
+  max-width: 100%;          /* Prevent container overflow */
+  background-color: #235570;   /* Your desired footer color */
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+}
+
+
+    .faqbody {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.faqbody::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('https://i.postimg.cc/KY41bmvQ/Chat-GPT-Image-Jul-14-2025-06-52-03-PM.png'); /* your base64 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(8px); /* adjust blur strength */
+    z-index: -1;
+}
+
+html, body {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto !important;
+}
+
+  </style>
+</head>
+<body class="faqbody ">
+
+
+  <nav>
+    <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ's</a></li>
+            <li><a href="contact.html">Contact Us</a></li> 
+            <li><a href="newsmedia.html">News & Media</a></li>  
+        </ul>
+  </nav>
+
+  <header>
+    <h1>About Us</h1>
+    <p>We are dedicated to providing the best neuropsychiatric care to our patients with compassion and expertise.</p>
+  </header>
+
+  <!-- Our Team Carousel -->
+ <section id="team">
+  <h2>Meet Our Team</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1: Dr. Rupinder -->
+      <div class="swiper-slide">
+        <img src="data:image/jpeg;base64,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" 
+             alt="Dr. Rupinder" />
+        <h3 style="color: #235570;">Dr. Rupinder</h3>
+        <p class="description">
+          Founder of the clinic, <strong>Dr. Rupinder</strong> is a well-known Psychiatrist who specializes in Neuropsychiatry. Her commitment to patient-centered care has helped transform the lives of countless individuals struggling with mental health challenges. With a strong academic background and years of clinical experience, she blends evidence-based medicine with empathy, ensuring each patient receives holistic and personalized treatment. Her leadership at Dr. Rupinder's Neuropsychiatry Center continues to inspire both her colleagues and the community.
+        </p>
+    
+        <br>
+      </div>
+
+      <!-- Slide 2: Dr. Shakti -->
+      <div class="swiper-slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLgkDHr3l5uZY9ZZmdLbsxXjjof9Wv-GBhTQ&s" alt="Dr. Shakti" />
+        <h3 style="color: #235570;">Dr. Shakti</h3>
+        <p class="description">
+          <strong>Dr. Shakti</strong> serves as the Psychologist at Dr. Rupinder’s Neuropsychiatry Center, bringing a strong clinical acumen and a calm, grounded presence that patients and families deeply trust. With a keen interest in adult psychiatry, de-addiction, and anxiety spectrum disorders, he combines medical expertise with empathetic patient care. Known for his methodical evaluations and holistic approach, Dr. Shakti plays a crucial role in designing personalized treatment plans and supporting long-term recovery. His dedication and collaborative mindset make him an invaluable part of the center’s multidisciplinary mental health team.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+
+      <!-- Controls -->
+            </div> <!-- swiper-wrapper ends -->
+    </div> <!-- Close .swiper properly -->
+
+    <br>
+
+    <!-- ✅ Move footer OUTSIDE and make sure it's not nested -->
+    <footer class="full-width-footer">
+      <p>&copy; 2025 Dr. Rupinder's Neuropsychiatry center, All rights reserved.</p>
+    </footer>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
+  </script>
+  <div id="chat-toggle">💬</div>
+<div id="chat-window">
+  <div id="chat-header">Ask Us Anything</div>
+  <div id="chat-log"></div>
+  <input type="text" id="chat-input" placeholder="Type your question..." />
+</div>
+<script src="chatbot.js"></script>
+<link rel="stylesheet" href="chatbot.css" />
+
+</body>
+</html>
+

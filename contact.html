@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .nav{
+            background-color: #7091a8;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ's</a></li>
+            <li><a href="contact.html">Contact Us</a></li> 
+            <li><a href="newsmedia.html">News & Media</a></li>  
+        </ul>
+  </nav>
+
+    <header class="contact-header">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you! Whether you have a question, feedback, or want to book an appointment, feel free to reach out!</p>
+    </header>
+
+    <main class="contact-content">
+        <section class="contact-form-section" id="contact-form">
+  <h2>Get in Touch</h2>
+  <form class="contact-form" action="https://formspree.io/f/xpwlzkgl" method="POST">
+    
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required placeholder="Enter your full name" class="input-field">
+    
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required placeholder="Enter your email" class="input-field">
+
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" required placeholder="Type your message here..." class="input-field"></textarea>
+
+    <button type="submit" class="btn submit-btn">Send Message</button>
+  </form>
+</section>
+
+
+        <section class="appointment-section" id="appointment-booking">
+            <h2>Book an Appointment</h2>
+            <form class="appointment-form" action="/submit-appointment" method="POST">
+                <label for="appointment-date">Preferred Date:</label>
+                <input type="date" id="appointment-date" name="appointment-date" required class="input-field">
+
+                <label for="appointment-time">Preferred Time:</label>
+                <input type="time" id="appointment-time" name="appointment-time" required class="input-field">
+
+                <label for="appointment-type">Type of Appointment:</label>
+                <select id="appointment-type" name="appointment-type" class="input-field">
+                    <option value="consultation">Consultation</option>
+                    <option value="follow-up">Follow-up</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <button type="submit" class="btn appointment-btn">Book Appointment</button>
+            </form>
+        </section>
+
+
+        <section class="contact-info-section" id="contact-info">
+            <h2>Our Contact Information</h2>
+            <p><strong>Email:</strong> <a href="mailto:info@example.com" class="contact-link">rko.medico@gmail.com</a></p>
+            <p><strong>Phone:</strong> <span class="contact-phone">070875 58177</span></p>
+            <p><strong>Address:</strong> <span class="contact-address">Government College Rd, Gurdaspur, India</span></p>
+        </section>
+
+        <section class="location-section" id="location-bar">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3381.886109854162!2d75.39420157515303!3d32.04527402102231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b935d300d6b61%3A0x5dc4ab83487a876e!2sDr%20Rupinder%20Neuro%20Psychiatry%20centre!5e0!3m2!1sen!2sin!4v1752206088159!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="contact-footer">
+        <p>&copy; 2025 Dr. Rupinder's Neuropsychiatry Center, All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  <div id="chat-toggle">💬</div>
+<div id="chat-window">
+  <div id="chat-header">Ask Us Anything</div>
+  <div id="chat-log"></div>
+  <input type="text" id="chat-input" placeholder="Type your question..." />
+</div>
+<script src="chatbot.js"></script>
+<link rel="stylesheet" href="chatbot.css" />
+
+</body>
+</html>

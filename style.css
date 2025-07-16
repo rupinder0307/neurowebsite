@@ -1,0 +1,539 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #235570; /* All text in white */
+    background-color: #f1fafb; /* Background color for the whole page */
+    width: 100%;
+  overflow-x: auto;
+}
+
+
+/* Navbar */
+nav {
+    width: 100%;
+    background-color: #7091a8; /* Grey bar for the header */
+    color: #ffffff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #f0f0f0;
+}
+
+/* Header Section */
+header {
+    background-color: #235570; /* Darker grey for the header background */
+    color: #fff;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+/* Main Section */
+main {
+    padding: 2rem;
+}
+
+/* Services Section */
+#services {
+    text-align: center;
+    background-color: #f1fafb; /* Darker grey background for services */
+    padding: 3rem 0;
+    margin-top: 2rem;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#services p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #ffffff; 
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 6px rgb(117, 198, 223);
+    text-align: center;
+    padding: 1rem;
+}
+
+.service-card {
+    background-color: #ffffff;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.service-card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Call to Action Section */
+#cta {
+    background-color:#235570;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem; 
+}
+
+#cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#cta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+#cta .btn {
+    background-color: #b0c6d4 ;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+#cta .btn:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Footer Section */
+footer {
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #235570;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  box-sizing: border-box;
+}
+
+
+
+footer p {
+    font-size: 1rem;
+}
+
+/* About Us Page */
+#team {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+#team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Keep existing styles up to .team-members, then update: */
+
+.team-members {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 2rem;
+    width: 100%;
+}
+
+/* Force members into two rows with full-width bars */
+.team-members > .row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+/* Keep .team-member styles the same */
+.team-member {
+    background-color: #444;
+    border-radius: 8px;
+    width: 250px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-shrink: 0;
+}
+
+
+/* Services Page */
+#services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 3rem 1rem;
+    }
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.service-card h3 {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Contact Us Page */
+.contact-header {
+    background-color: #235570;
+    color: #fff;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.contact-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contact-header p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.contact-content {
+    padding: 2rem;
+}
+
+.contact-form-section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form-section label {
+    display: block;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-form-section .input-field {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form-section button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-form-section button:hover {
+    background-color: #0056b3;
+}
+
+.appointment-section {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.appointment-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.appointment-section .input-field,
+.appointment-section select {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.appointment-section button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+.appointment-section button:hover {
+    background-color: #218838;
+}
+
+.contact-info-section {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info-section a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-info-section a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    margin-top: 2rem;
+}
+
+.full-width-footer {
+  width: 100vw;        /* Span full screen */
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #235570;
+}
+
+footer {
+  width: 100vw;
+  background-color: #235570;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+
+/* ✅ Position arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  padding: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ✅ Fix pagination below content */
+.swiper-pagination {
+  position: absolute;
+  bottom: -25px;
+  text-align: center;
+  width: 100%;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  font-size: 16px;     /* Reduce the arrow size */
+  width: 25px;         /* Narrower arrow button */
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.3); /* Optional: adds a soft background */
+  border-radius: 50%;  /* Optional: makes it round */
+  top: 50%;            /* Vertically center */
+  transform: translateY(-50%);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px;     /* This actually controls the arrow icon size */
+}
+
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+/* Dot pagination below the card */
+.swiper-pagination {
+  position: relative;
+  margin-top: 15px;
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: #666;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #000;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 20px;     /* Inside the card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #888;
+  opacity: 1;
+  margin: 0 6px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #222;
+}
+
+/*for FAQ page*/
+
+/* FOOTER */
+.full-width-footer {
+  margin-top: 40px;
+  background-color: #235570;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+  .content {
+      height: 1500px; /* Simulate long content */
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    .scroll-button {
+      display: block;
+      margin: 50px auto;
+      padding: 10px 20px;
+      background-color: #969799;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .photohead{
+        background-color: #4a738f;
+    }

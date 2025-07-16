@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css">
+  <title>FAQs | Dr. Rupinder’s Neuropsychiatry Center</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #6f6d6d;
+      color: #235570;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      width: 100%;
+      background-color: #7091a8;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 15px 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .page-wrapper {
+      flex: 1;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: #fff;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .faq-question {
+      padding: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      position: relative;
+      color: #235570;
+    }
+
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 24px;
+      transition: transform 0.3s;
+      color: #235570;
+    }
+
+    .faq-question.active::after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      padding: 0 20px;
+      color: #235570;
+    }
+
+    .faq-answer.open {
+      padding: 20px;
+      max-height: 500px;
+    }
+
+    footer.full-width-footer {
+      background-color: #235570;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+    .faqbody {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.faqbody::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('data:image/jpeg;base64,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'); /* your base64 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(8px); /* adjust blur strength */
+    z-index: -1;
+}
+
+html, body {
+  height: auto;
+  min-height: 100vh;
+  overflow-y: auto !important;
+}
+
+  </style>
+</head>
+
+<body class="faqbody">
+
+  <!-- ✅ Navbar now correctly placed inside body -->
+  <nav>
+    <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQ's</a></li>
+            <li><a href="contact.html">Contact Us</a></li> 
+            <li><a href="newsmedia.html">News & Media</a></li>  
+        </ul>
+  </nav>
+
+
+  <!-- ✅ Main content with consistent padding -->
+  <div class="page-wrapper">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <div class="faq-question">What conditions do you treat?</div>
+        <div class="faq-answer">We specialize in mood disorders, anxiety, child & adolescent psychiatry, de-addiction, and women's mental health concerns.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do you offer online consultations?</div>
+        <div class="faq-answer">Yes, we offer secure online video consultations for both new and follow-up patients.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Are the medications safe and confidential?</div>
+        <div class="faq-answer">All treatments follow evidence-based guidelines. Prescriptions are discreet, and your privacy is fully respected.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How do I book an appointment?</div>
+        <div class="faq-answer">Appointments can be booked through our website's Contact Us form or by calling +91 70875 58177.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question"> When should someone see a neuropsychiatrist?</div>
+        <div class="faq-answer">Individuals should consider seeing a neuropsychiatrist if they experience:
+<li>Mental health symptoms that are related to or worsened by a known neurological condition.</li>
+<li>Mental health symptoms following a brain injury.</li> 
+<li>Mental health symptoms that are not responding to traditional psychiatric treatment.</li>
+<li>A need for cognitive rehabilitation after a neurological event or injury.</li></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What is neuropsychiatry?</div>
+        <div class="faq-answer">Neuropsychiatry bridges the gap between neurology and psychiatry, focusing on mental health problems that have a neurological basis. It examines how brain function influences behavior, mood, and cognitive abilities, especially in individuals with neurological conditions.</div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- ✅ Footer now full width and stays at the bottom -->
+  <footer class="full-width-footer">
+    <p>&copy; 2025 Dr. Rupinder's Neuropsychiatry Center. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const questions = document.querySelectorAll('.faq-question');
+    questions.forEach(q => {
+      q.addEventListener('click', () => {
+        q.classList.toggle('active');
+        const answer = q.nextElementSibling;
+        answer.classList.toggle('open');
+      });
+    });
+  </script>
+<div id="chat-toggle">💬</div>
+<div id="chat-window">
+  <div id="chat-header">Ask Us Anything</div>
+  <div id="chat-log"></div>
+  <input type="text" id="chat-input" placeholder="Type your question..." />
+</div>
+<script src="chatbot.js"></script>
+<link rel="stylesheet" href="chatbot.css" />
+
+</body>
+</html>
